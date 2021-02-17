@@ -9,7 +9,7 @@ function createStimuli(numbers, numberWithinLevel, level) {
                 level: level,
                 correct_answer: numbers.join(""),
                 number_within_level: numberWithinLevel,
-                number_within_stimuli: j+1,
+                number_within_run: j+1,
                 is_mistake: 0
             }
             array.push(stimulus)
