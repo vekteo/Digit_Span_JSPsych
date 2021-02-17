@@ -21,7 +21,7 @@ The task starts with two practice runs (with 2 digits per run). Here, the user r
 - <strong>level:</strong> the level of the task (2 for the practice runs, 3-9 for the task runs)
 - <strong>correct_answer:</strong> the stimulus stream, the correct answer
 - <strong>number_within_level:</strong> the number of the trial within the given level (1-2 for the practice runs, 1-4 for the task runs)
-- <strong>number_within_stimuli:</strong> the number of the stimulus within the run (1-2 for the practice runs, 1-9 for the task runs)
+- <strong>number_within_run:</strong> the number of the stimulus within the run (1-2 for the practice runs, 1-9 for the task runs)
 - <strong>is_mistake:</strong> if the answer given was uncorrect (0 - the answer was correct; 1 - the answer was incorrect)
 - <strong>responses:</strong> the answer typed in the input field (in an object)
 
