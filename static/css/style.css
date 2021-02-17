@@ -1,0 +1,23 @@
+p {
+    font-size: 1.25em;
+}
+
+img {
+    width: 800px;
+}
+
+body {
+    background-color: light-gray
+}
+
+#stimulus {
+    font-size: 100px
+}
+
+.correct {
+    color: green
+}
+
+.wrong {
+    color: red
+}

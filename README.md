@@ -1,2 +1,2 @@
-# Digit_Span_JSPSych
+# Digit_Span_JSPsych
  
