@@ -105,15 +105,14 @@ const practiceBlock1 = { ... timelineElementStructure, timeline_variables: digit
 const practiceBlock2 = { ... timelineElementStructure, timeline_variables: digitSpanStimuli.practice.level2, timeline: [test] }
 const practiceAnswer = { ... timelineElementStructure, timeline_variables: answerInput, timeline: [answer] }
 
-
-timeline.push(welcome, instructions, startOfPractice, practiceBlock1, practiceAnswer, feedback1, practiceBlock2, practiceAnswer, feedback2, startNow);
+timeline.push({type: "fullscreen", fullscreen_mode: true}, welcome, instructions, startOfPractice, practiceBlock1, practiceAnswer, feedback1, practiceBlock2, practiceAnswer, feedback2, startNow);
 
 for (i = 0; i < levels.length; i++) {
   pushElement(levels[i], test)
   pushElement(answerInput, answer)
 }
 
-timeline.push(endOfTask);
+timeline.push(endOfTask, {type: "fullscreen", fullscreen_mode: false});
 
 /* start the experiment */
 jsPsych.init({
