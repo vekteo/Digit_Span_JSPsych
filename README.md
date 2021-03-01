@@ -3,11 +3,11 @@
 <p>A classical Digit Span Task created with JSPsych.</p>
 
 <h2>Structure of the task</h2>
-<p>One digit (1-9) per second appears one the screen (only one at a time). The task of the user is to try to remember the digits in their order of appearance. After a few presented digits, a textbox appeared on the screen and the user have to type in their answer. The answer can be submitted by clicking on the 'Continue' button, or by hittng Enter.</p>
+<p>One digit (1-9) per second appears one the screen (only one at a time). The task of the user is to try to remember the digits in their order of appearance. After a few digits, a textbox appears on the screen and the user have to type in their answer. The answer can be submitted by clicking on the 'Continue' button, or by hittng Enter.</p>
 
-<img src="static/images/instruction.png" width="500px" /><figcaption><i>The Digit Span task. The user has to try to remember the presented numbers in their order of appearance.</i></figcaption>
+<img src="static/images/instruction.png" width="500px" /><figcaption><i>The Digit Span task. The user has to try to remember the presented digits in their order of appearance.</i></figcaption>
  
-<p>The task starts with two practice runs (with 2 digits per run). Here, the user receive feedback whether their answer was correct. After the two practice runs, the task begins. Seven levels can be completed alltogether. On the first level, three digits are presented, on each level, the length of the digit stream become one digit longer  (i.e., the maximum length is 9 digits). Each level contains four trials. If the user answers correctly in three out of the four trials, the next level is presented. If the level is not completed successfully (i.e., the user answers correctly for less than three trials), the task ends.</p>
+<p>The task starts with two practice runs (with 2 digits per run). Here, the user receive feedback whether their answer was correct. After the two practice runs, the task begins. Altogether, seven levels can be completed. On the first level, three digits are presented, and on each level, the length of the digit stream become one digit longer (i.e., the maximum length is 9 digits). Each level contains four trials. If the user answers correctly in three out of the four trials, the next level is presented. If the level is not completed successfully (i.e., the user answers correctly for less than three trials), the task ends.</p>
 
 <h2>Output file</h2>
 
