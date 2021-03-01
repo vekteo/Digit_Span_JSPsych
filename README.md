@@ -2,12 +2,12 @@
  
 A classical Digit Span Task created with JSPsych.
 
-<h1>Structure of the Task</h1
+<h2>Structure of the Task</h2>
 One digit (1-9) per second appears one the screen (only one at a time). The task of the user is to try to remember the digits in their order of appearance. After a few presented digits, a textbox appeared on the screen and the user have to type in their answer. The answer can be submitted by clicking on the 'Continue' button, or by hittng Enter.
  
 The task starts with two practice runs (with 2 digits per run). Here, the user receive feedback whether their answer was correct. After the two practice runs, the task begins. Seven levels can be completed alltogether. On the first level, three digits are presented, on each level, the length of the digit stream become one digit longer  (i.e., the maximum length is 9 digits). Each level contains four trials. If the user answers correctly in three out of the four trials, the next level is presented. If the level is not completed successfully (i.e., the user answers correctly for less than three trials), the task ends.
 
-<h1>Output file</h1>
+<h2>Output file</h2>
 
 - <strong>success:</strong> whether fullscreen mode was successfully started/ended (true or false)
 - <strong>rt:</strong> the reaction time for submitting the answer
@@ -25,5 +25,5 @@ The task starts with two practice runs (with 2 digits per run). Here, the user r
 - <strong>is_mistake:</strong> if the answer given was uncorrect (0 - the answer was correct; 1 - the answer was incorrect)
 - <strong>responses:</strong> the answer typed in the input field (in an object)
 
-<h1>Browser requirements</h1>
+<h2>Browser requirements</h2>
 Any browser except Safari and Internet Explorer.
