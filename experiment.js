@@ -1,4 +1,15 @@
-/* variables */
+/* 
+Created by Teodora Vekony (vekteo@gmail.com)
+MEMO Team (PI: Dezso Nemeth)
+Lyon Neuroscience Research Center
+Universite Claude Bernard Lyon 1
+
+Github:https://github.com/vekteo/Digit_Span_JSPsych
+*/
+
+
+/*************** VARIABLES ***************/
+
 
 const stimulusDuration = 1000;
 let mistake = 0;
