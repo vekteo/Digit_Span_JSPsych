@@ -14,7 +14,8 @@ Github:https://github.com/vekteo/Digit_Span_JSPsych
 let mistake = 0;
 let quit = 0;
 let response;
-const images = ["static/images/instruction.gif"];
+let result;
+const images = ["static/images/instruction_en.gif", "static/images/instruction_hu.gif"];
 
 /* create trials */
 
