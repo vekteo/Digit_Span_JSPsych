@@ -11,7 +11,6 @@ Github:https://github.com/vekteo/Digit_Span_JSPsych
 /*************** VARIABLES ***************/
 
 
-const stimulusDuration = 1000;
 let mistake = 0;
 let quit = 0;
 let response;
