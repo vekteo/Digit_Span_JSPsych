@@ -24,40 +24,52 @@ const trialStructure = {
   type: "html-keyboard-response",
 };
 
-const welcome = {... trialStructure, stimulus: "<h2>Welcome to the task!</h2><h2>Press any key to begin.</h2>" };    
-const afterPractice = {... trialStructure, stimulus: "<p>Good! The task start now. From now on, you won't receive feedback about your answer.</p><br><p>Press any button to start the task!</p>" };
-const betweenBlockRest = {... trialStructure, stimulus: "<p>Now you can rest a little.</p><br><p>Press any button to continue the task!</p>" };
-const instructions = {... trialStructure, stimulus: "<p>In this task, <strong>numbers</strong> will be presented on the screen, once at a time.<br><br>Each number will be presented for one second. After that, a new number will be presented, and so on.<br><br>Your task is <strong>to try to memorize all the numbers</strong>.<br><br>After a few numbers, we will ask you to type in the numbers in their order of appearance. You can submit your results by pressing the Continue button or by hitting Enter.</p><img src='static/images/instruction.gif'/><br><p>Press any key on the keyboard to continue!</p>" };
-const startOfPractice = {... trialStructure, stimulus: "<p>First, you can practice the task a little bit.</p><br><p>Press any key on the keyboard to start the practice!</p>"}
+const instructions = {
+  type: "instructions",
+  pages: [
+      `<h1>${language.welcomePage.welcome}</h1><br><p>${language.welcomePage.clickNext}</p>`,
+      `<p>${language.instruction.numbers}</p><p>${language.instruction.oneSecond}</p><p>${language.instruction.yourTask}</p><p>${language.instruction.submit}</p>${language.instruction.image}<p>${language.instruction.clickNext}</p>`,
+],
+  show_clickable_nav: true,
+  button_label_next: language.button.next,
+  button_label_previous: language.button.previous
+}
+
+const welcome = {... trialStructure, stimulus: `<h2>${language.welcomePage.welcome}</h2><h2>${language.welcomePage.clickNext}</h2>` };    
+const afterPractice = {... trialStructure, stimulus: `<p>${language.practice.afterPractice}</p><br><p>${language.practice.startTask}</p>` };
+const startOfPractice = {... trialStructure, stimulus: `<p>${language.practice.practice}</p><p>${language.practice.startPractice}</p>`}
 const feedback1 = {
   ... trialStructure,
-  stimulus: "<p>The answer is: <strong>36</strong></p>",
+  stimulus: `<p>${language.feedback.answerIs}<strong>36</strong></p>`,
   on_start: function(trial) { 
     let answer = jsPsych.data.get().last(1).values()[0].responses.replace(/\D/g, "");
-    answer === jsPsych.data.get().last(2).values()[0].correct_answer ? trial.stimulus = "<p>The correct answer is: <strong>36</strong></p><br><h2 class='correct'>Correct!</h2><br><br><p>Press any key for the next practice trial!</p>" : trial.stimulus = "<p>The correct answer is: <strong>36</strong></p><br><h2 class='wrong'>Wrong!</h2><br><p>Your answer was " + `${answer}` + "<br><br><p>Press any key for the next practice trial!</p>"
+    answer === jsPsych.data.get().last(2).values()[0].correct_answer ? trial.stimulus = `<p>${language.feedback.correctIs}<strong>36</strong></p><h2 class='correct'>${language.feedback.correct}</h2><p>${language.feedback.nextPractice}</p>` : trial.stimulus = `<p>${language.feedback.correctIs}<strong>36</strong></p><h2 class='wrong'>${language.feedback.wrong}</h2><p>${language.feedback.yourAnswer}${answer}</p><p>${language.feedback.nextPractice}</p>`
   }};
+  
 const feedback2 = {
     ... trialStructure,
-    stimulus: "<p>The answer is: <strong>47</strong></p>",
+    stimulus: `<p>${language.feedback.answerIs}<strong>47</strong></p>`,
     on_start: function(trial) {
       let answer = jsPsych.data.get().last(1).values()[0].responses.replace(/\D/g, "");
-      answer === jsPsych.data.get().last(2).values()[0].correct_answer ? trial.stimulus = "<p>The correct answer is: <strong>47</strong></p><br><h2 class='correct'>Correct!</h2><br><br><p>Press any key for the next practice trial!</p>" : trial.stimulus = "<p>The correct answer is: <strong>47</strong></p><br><h2 class='wrong'>Wrong!</h2><br><p>Your answer was " + `${answer}` + "<br><br><p>Press any key to continue!</p>"
+      answer === jsPsych.data.get().last(2).values()[0].correct_answer ? trial.stimulus = `<p>${language.feedback.correctIs}<strong>47</strong></p><h2 class='correct'>${language.feedback.correct}</h2><p>${language.feedback.toContinue}</p>` : trial.stimulus = `<p>${language.feedback.correctIs}<strong>47</strong></p><h2 class='wrong'>${language.feedback.wrong}</h2><p>${language.feedback.yourAnswer}${answer}</p><p>${language.feedback.toContinue}</p>`
     }};
 
 const endOfTask = {... trialStructure,
-  stimulus: "<h2>End of the task</h2><br><p>The longest stream you remembered correctly contained 2 numbers.</p><br><p>Thank you!</p>",
+  stimulus: `<h2>${language.end.end}</h2><br><p>${language.feedback.longestStream2}</p><br><p>${language.end.thankYou}</p>`,
   on_start: function(trial) {
-    let result;
     if (jsPsych.data.get().last(2).values()[0].correct_answer != "295173468"){
       result = (jsPsych.data.get().last(2).values()[0].level)-1;
     } else {
       result = 9;
     }
-    trial.stimulus = "<h2>End of the task</h2><br><p>The longest run you remembered correctly contained <strong>" + `${result}` +"</strong> numbers.</p><br><p>Thank you!</p>"
+    trial.stimulus = `<h2>${language.end.end}</h2><p>${language.feedback.longestStream}<strong>${result}</strong>${language.feedback.numbers}</p><p>${language.end.thankYou}</p>`
+  },
+  on_finish: function (data) {
+    data.digit_span = result;
   }
 }
 
-const startNow = {... trialStructure, stimulus: "<h2>End of practice</h2><br><p>The task start now. From now on, you won't receive any feedback.</p><br><p>Press any key to start the task!</p>" };
+const startNow = {... trialStructure, stimulus: `<h2>${language.practice.end}</h2><p>${language.task.start}</p><p>${language.task.press}</p>` };
 
 let levels = [
   digitSpanStimuli.digit3.level1, digitSpanStimuli.digit3.level2, digitSpanStimuli.digit3.level3, digitSpanStimuli.digit3.level4,
@@ -71,8 +83,9 @@ let levels = [
 
 const answer = {
   type: 'survey-html-form',
-  preamble: '<p>What numbers have you seen?</b><br><p>Enter them <strong> in order </strong>the text box below!</p>',
+  preamble: `<p>${language.task.whatNumbers}</p><p>${language.task.enter}</p>`,
   html: '<p><input name="answer" type="text" id="input" required/></p>',
+  button_label: `${language.button.submit}`,
   on_load: function() {
     document.getElementById("input").focus()
   }
@@ -116,7 +129,7 @@ const practiceBlock1 = { ... timelineElementStructure, timeline_variables: digit
 const practiceBlock2 = { ... timelineElementStructure, timeline_variables: digitSpanStimuli.practice.level2, timeline: [test] }
 const practiceAnswer = { ... timelineElementStructure, timeline_variables: answerInput, timeline: [answer] }
 
-timeline.push({type: "fullscreen", fullscreen_mode: true}, welcome, instructions, startOfPractice, practiceBlock1, practiceAnswer, feedback1, practiceBlock2, practiceAnswer, feedback2, startNow);
+timeline.push({type: "fullscreen", fullscreen_mode: true}, instructions, startOfPractice, practiceBlock1, practiceAnswer, feedback1, practiceBlock2, practiceAnswer, feedback2, startNow);
 
 for (i = 0; i < levels.length; i++) {
   pushElement(levels[i], test)
