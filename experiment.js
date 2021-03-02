@@ -105,7 +105,7 @@ function pushElement(stimulus, testOrAnswer){
   timeline.push(element)
 }
 
-/* define timeline elements */
+/*************** TIMELINE ***************/
  
 const timelineElementStructure = {
     repetitions: 1,
@@ -125,7 +125,8 @@ for (i = 0; i < levels.length; i++) {
 
 timeline.push(endOfTask, {type: "fullscreen", fullscreen_mode: false});
 
-/* start the experiment */
+/*************** EXPERIMENT START AND DATA UPDATE ***************/
+
 jsPsych.init({
   timeline: timeline,
   preload_images: images,
