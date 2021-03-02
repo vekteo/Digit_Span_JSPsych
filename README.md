@@ -26,6 +26,14 @@
 - <strong>number_within_run:</strong> the number of the stimulus within the run (1-2 for the practice runs, 1-9 for the task runs)
 - <strong>is_mistake:</strong> if the answer given was uncorrect (0 - the answer was correct; 1 - the answer was incorrect)
 - <strong>responses:</strong> the answer typed in the input field (in an object)
+- <strong>digit_span:</strong> the digit span score (the length of the run where at least 3/4 trials were correctly remembered)
+
+<h2>Setting options</h2>
+<p>You can set the following parameters by modifying the <i>parameters.js</i> file:</p>
+<ul>
+    <il>duration of the stimulus (in ms): the digits' presentation time (default: 1000 ms)</il>
+    <il>language: currently available languages are: english (en), hungarian (hu)</il>
+</ul>
 
 <h2>Browser requirements</h2>
-Any browser except Safari and Internet Explorer.
+<p>Any browser except Safari and Internet Explorer. Recommended: Chrome</p>
