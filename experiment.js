@@ -31,17 +31,20 @@ const instructions = {
       `<h1>${language.welcomePage.welcome}</h1><br><p>${language.welcomePage.clickNext}</p>`,
       `<p>${language.instruction.numbers}</p><p>${language.instruction.oneSecond}</p><p>${language.instruction.yourTask}</p><p>${language.instruction.submit}</p>${language.instruction.image}<p>${language.instruction.clickNext}</p>`,
 ],
+  data: {test_part: "instruction"},
   show_clickable_nav: true,
   button_label_next: language.button.next,
   button_label_previous: language.button.previous
 }
 
 const welcome = {... trialStructure, stimulus: `<h2>${language.welcomePage.welcome}</h2><h2>${language.welcomePage.clickNext}</h2>` };    
-const afterPractice = {... trialStructure, stimulus: `<p>${language.practice.afterPractice}</p><br><p>${language.practice.startTask}</p>` };
-const startOfPractice = {... trialStructure, stimulus: `<p>${language.practice.practice}</p><p>${language.practice.startPractice}</p>`}
+const afterPractice = {... trialStructure, stimulus: `<p>${language.practice.afterPractice}</p><br><p>${language.practice.startTask}</p>`, data: {test_part: "start_task"},};
+const startOfPractice = {... trialStructure, stimulus: `<p>${language.practice.practice}</p><p>${language.practice.startPractice}</p>`, data: {test_part: "start_practice"},}
+
 const feedback1 = {
   ... trialStructure,
   stimulus: `<p>${language.feedback.answerIs}<strong>36</strong></p>`,
+  data: {test_part: "feedback"},
   on_start: function(trial) { 
     let answer = jsPsych.data.get().last(1).values()[0].responses.replace(/\D/g, "");
     answer === jsPsych.data.get().last(2).values()[0].correct_answer ? trial.stimulus = `<p>${language.feedback.correctIs}<strong>36</strong></p><h2 class='correct'>${language.feedback.correct}</h2><p>${language.feedback.nextPractice}</p>` : trial.stimulus = `<p>${language.feedback.correctIs}<strong>36</strong></p><h2 class='wrong'>${language.feedback.wrong}</h2><p>${language.feedback.yourAnswer}${answer}</p><p>${language.feedback.nextPractice}</p>`
@@ -50,6 +53,7 @@ const feedback1 = {
 const feedback2 = {
     ... trialStructure,
     stimulus: `<p>${language.feedback.answerIs}<strong>47</strong></p>`,
+    data: {test_part: "feedback"},
     on_start: function(trial) {
       let answer = jsPsych.data.get().last(1).values()[0].responses.replace(/\D/g, "");
       answer === jsPsych.data.get().last(2).values()[0].correct_answer ? trial.stimulus = `<p>${language.feedback.correctIs}<strong>47</strong></p><h2 class='correct'>${language.feedback.correct}</h2><p>${language.feedback.toContinue}</p>` : trial.stimulus = `<p>${language.feedback.correctIs}<strong>47</strong></p><h2 class='wrong'>${language.feedback.wrong}</h2><p>${language.feedback.yourAnswer}${answer}</p><p>${language.feedback.toContinue}</p>`
@@ -57,6 +61,7 @@ const feedback2 = {
 
 const endOfTask = {... trialStructure,
   stimulus: `<h2>${language.end.end}</h2><br><p>${language.feedback.longestStream2}</p><br><p>${language.end.thankYou}</p>`,
+  data: {test_part: "debrief"},
   on_start: function(trial) {
     if (jsPsych.data.get().last(2).values()[0].correct_answer != "295173468"){
       result = (jsPsych.data.get().last(2).values()[0].level)-1;
@@ -70,7 +75,7 @@ const endOfTask = {... trialStructure,
   }
 }
 
-const startNow = {... trialStructure, stimulus: `<h2>${language.practice.end}</h2><p>${language.task.start}</p><p>${language.task.press}</p>` };
+const startNow = {... trialStructure, stimulus: `<h2>${language.practice.end}</h2><p>${language.task.start}</p><p>${language.task.press}</p>`, data: {test_part: "start_task"}, };
 
 let levels = [
   digitSpanStimuli.digit3.level1, digitSpanStimuli.digit3.level2, digitSpanStimuli.digit3.level3, digitSpanStimuli.digit3.level4,
@@ -87,6 +92,7 @@ const answer = {
   preamble: `<p>${language.task.whatNumbers}</p><p>${language.task.enter}</p>`,
   html: '<p><input name="answer" type="text" id="input" required/></p>',
   button_label: `${language.button.submit}`,
+  data: {test_part: "answer"},
   on_load: function() {
     document.getElementById("input").focus()
   }
@@ -99,6 +105,7 @@ const test = {
   data: jsPsych.timelineVariable('data'),
   trial_duration: stimulusDuration,
   stimulus_duration: stimulusDuration,
+  on_finish: function (data) { data.test_part = "stimulus" }
 }
 
 /* function for adding trials to timeline */
