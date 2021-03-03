@@ -12,14 +12,17 @@
 <h2>Output file</h2>
 
 - <strong>success:</strong> whether fullscreen mode was successfully started/ended (true or false)
-- <strong>rt:</strong> the reaction time for submitting the answer
-- <strong>stimulus:</strong> stimulus on the screen in HTML
-- <strong>key_press:</strong> number code of the key pressed
 - <strong>trial_type:</strong> JSPSych trialtype of the given trial (fullscreen, html-keyboard-response or survey-html-form)
 - <strong>trial_index:</strong> the number of the given trials (all events considered, even instructions, feedbacks!)
 - <strong>time_elapsed:</strong> the time elapsed from the start of the script in ms
+- <strong>subject:</strong> random subject ID (15 character long)
 - <strong>internal_code_id:</strong> internal node id of the trial
 - <strong>browser_event:</strong> browser events at the given trial (fullscreenenter, fullscreenexit, blur or focus)
+- <strong>view_history:</strong> viewing data about the instruction trial
+- <strong>rt:</strong> the reaction time for submitting the answer
+- <strong>test_part:</strong> the part of the task (instruction, start_practice, stimulus, answer, feedback, start_task, debrief)
+- <strong>stimulus:</strong> stimulus on the screen in HTML
+- <strong>key_press:</strong> number code of the key pressed
 - <strong>level:</strong> the level of the task (2 for the practice runs, 3-9 for the task runs)
 - <strong>correct_answer:</strong> the stimulus stream, the correct answer
 - <strong>number_within_level:</strong> the number of the trial within the given level (1-2 for the practice runs, 1-4 for the task runs)
