@@ -16,6 +16,7 @@ let quit = 0;
 let response;
 let result;
 const images = ["static/images/instruction_en.gif", "static/images/instruction_hu.gif"];
+const subjectId = jsPsych.randomization.randomID(15);
 
 /* create trials */
 
@@ -129,6 +130,7 @@ const practiceBlock1 = { ... timelineElementStructure, timeline_variables: digit
 const practiceBlock2 = { ... timelineElementStructure, timeline_variables: digitSpanStimuli.practice.level2, timeline: [test] }
 const practiceAnswer = { ... timelineElementStructure, timeline_variables: answerInput, timeline: [answer] }
 
+jsPsych.data.addProperties({subject: subjectId});
 timeline.push({type: "fullscreen", fullscreen_mode: true}, instructions, startOfPractice, practiceBlock1, practiceAnswer, feedback1, practiceBlock2, practiceAnswer, feedback2, startNow);
 
 for (i = 0; i < levels.length; i++) {
