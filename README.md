@@ -1,6 +1,6 @@
 # Digit_Span_JSPsych
  
-<p>A classical Digit Span Task created with JSPsych.</p>
+<p>A classical Digit Span Task created with JSPsych <a href="https://link.springer.com/article/10.3758/s13428-014-0458-y">de Leeuw, J. R., 2015</a>.</p>
 
 <h2>Structure of the task</h2>
 <p>One digit (1-9) per second appears one the screen (only one at a time). The task of the user is to try to remember the digits in their order of appearance. After a few digits, a textbox appears on the screen and the user have to type in their answer. The answer can be submitted by clicking on the 'Continue' button, or by hitting Enter.</p>
