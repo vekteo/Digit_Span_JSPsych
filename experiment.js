@@ -153,7 +153,7 @@ jsPsych.init({
   timeline: timeline,
   preload_images: images,
   on_close: function(){
-    jsPsych.data.get().localSave("csv", "DS_output_quitting.csv");
+    jsPsych.data.get().localSave("csv", `DS_subject_${subjectId}_quitted_output.csv`);
   },
   on_data_update: function(){
 
@@ -185,6 +185,6 @@ jsPsych.init({
 
   },
   on_finish: function() {
-    jsPsych.data.get().localSave("csv", "DS_output.csv");
+    jsPsych.data.get().localSave("csv", `DS_subject_${subjectId}_output.csv`);
   }
 });
