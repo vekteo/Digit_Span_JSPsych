@@ -35,7 +35,7 @@
 <p>You can set the following parameters by modifying the <i>parameters.js</i> file:</p>
 <ul>
     <li>duration of the stimulus (in ms): the digits' presentation time (default: 1000 ms)</li>
-    <li>language: currently available languages are: english (en), hungarian (hu)</li>
+    <li>language: currently available languages are: english (en), hungarian (hu), spanish (es), french (fr), portuguese (pt)</li>
 </ul>
 
 <h2>Browser requirements</h2>
