@@ -79,7 +79,7 @@ const hu = {
         submit: "Tovább"
     },
      fullscreen: {
-         fullscreenText: "A feladat teljes képernyőre ugrik, amint megnyomod a Tovább gombot.",
+         fullscreenText: "A feladat teljes képernyőre ugrik, amint a Tovább gombra kattintasz.",
          fullscreenButton: "Tovább"
     },
     feedback: {
