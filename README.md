@@ -15,7 +15,8 @@
 - <strong>trial_type:</strong> JSPSych trialtype of the given trial (fullscreen, html-keyboard-response or survey-html-form)
 - <strong>trial_index:</strong> the number of the given trials (all events considered, even instructions, feedbacks!)
 - <strong>time_elapsed:</strong> the time elapsed from the start of the script in ms
-- <strong>subject:</strong> random subject ID (15 character long)
+- <strong>subject:</strong> A 15-character long random subject ID for offline version, and customized subject number for offline version
+- <strong>session:</strong> customized session number (for offline version only)
 - <strong>internal_code_id:</strong> internal node id of the trial
 - <strong>browser_event:</strong> browser events at the given trial (fullscreenenter, fullscreenexit, blur or focus)
 - <strong>view_history:</strong> viewing data about the instruction trial
@@ -37,6 +38,9 @@
     <li>duration of the stimulus (in ms): the digits' presentation time (default: 1000 ms)</li>
     <li>language: currently available languages are: english (en), hungarian (hu), spanish (es), french (fr), portuguese (pt)</li>
 </ul>
+
+<h2>How to start the task</h2>
+Open the <i>index.html</i> file in either the <i>offline</i> or <i>online</i> folder. When the offline version is started, you can customize the subject and session numbers (any number is accepted). If you start the offline version, a random subject ID will be allocated.
 
 <h2>Browser requirements</h2>
 <p>Any browser except Safari and Internet Explorer. Recommended: Chrome</p>
