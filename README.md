@@ -15,7 +15,7 @@
 - <strong>trial_type:</strong> JSPSych trialtype of the given trial (fullscreen, html-keyboard-response or survey-html-form)
 - <strong>trial_index:</strong> the number of the given trials (all events considered, even instructions, feedbacks!)
 - <strong>time_elapsed:</strong> the time elapsed from the start of the script in ms
-- <strong>subject:</strong> A 15-character long random subject ID for offline version, and customized subject number for offline version
+- <strong>subject:</strong> a 15-character long random subject ID for online version, and customized subject number for offline version
 - <strong>session:</strong> customized session number (for offline version only)
 - <strong>internal_code_id:</strong> internal node id of the trial
 - <strong>browser_event:</strong> browser events at the given trial (fullscreenenter, fullscreenexit, blur or focus)
