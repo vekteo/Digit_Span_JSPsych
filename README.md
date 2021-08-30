@@ -1,4 +1,6 @@
 # Digit_Span_JSPsych
+
+<i>Created by the MEMO Team of Lyon Neuroscience Research Center (CRNL) (PI: Dezso Nemeth)</i>
  
 <p>A classical Digit Span Task created with JSPsych <a href="https://link.springer.com/article/10.3758/s13428-014-0458-y">de Leeuw, J. R., 2015</a>.</p>
 
