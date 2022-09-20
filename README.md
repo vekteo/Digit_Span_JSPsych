@@ -2,7 +2,7 @@
 
 <i>Created by the MEMO Team of Lyon Neuroscience Research Center (CRNL) (PI: Dezso Nemeth)</i>
  
-<p>A Digit Span Task created with JSPsych <a href="https://link.springer.com/article/10.3758/s13428-014-0458-y">de Leeuw, J. R., 2015</a>.</p>
+<p>A Digit Span Task created with jsPsych <a href="https://link.springer.com/article/10.3758/s13428-014-0458-y">de Leeuw, J. R., 2015</a>.</p>
 
 <h2>Citation</h2>
 If you use the script, please include this citation in your manuscript:
