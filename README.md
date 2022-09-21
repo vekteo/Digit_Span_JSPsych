@@ -8,8 +8,8 @@
 If you use the script, please include this citation in your manuscript:
 
 Vékony, T. (2021). Digit Span Task created with jsPsych (Version 1.0.0) [Computer software]. https://doi.org/10.5281/zenodo.7096258
+<a href="https://zenodo.org/badge/latestdoi/339664153"><img src="https://zenodo.org/badge/339664153.svg" alt="DOI"></a>
 
-<a href="https://zenodo.org/badge/latestdoi/343400302"><img src="https://zenodo.org/badge/343400302.svg" alt="DOI"></a>
 
 <h2>Structure of the task</h2>
 <p>One digit (1-9) per second appears one the screen (only one at a time). The task of the user is to try to remember the digits in their order of appearance. After a few digits, a textbox appears on the screen and the user have to type in their answer. The answer can be submitted by clicking on the 'Continue' button, or by hitting Enter.</p>
