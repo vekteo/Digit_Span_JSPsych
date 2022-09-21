@@ -1,4 +1,4 @@
-# Digit_Span_jsPsych
+# Digit Span Task created with jsPsych
 
 <i>Created by the MEMO Team of Lyon Neuroscience Research Center (CRNL) (PI: Dezso Nemeth)</i>
  
@@ -6,7 +6,6 @@
 
 <h2>Citation</h2>
 If you use the script, please include this citation in your manuscript:
-
 
 Vékony, T. (2021). Digit Span Task created with jsPsych (Version 1.0.0) [Computer software]. https://doi.org/10.5281/zenodo.7096258
 
