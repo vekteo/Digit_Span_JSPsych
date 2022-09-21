@@ -8,7 +8,7 @@
 If you use the script, please include this citation in your manuscript:
 
 
-Vékony, T. (2021). Digit Span Task (Version 1.0.0) [Computer software]. https://doi.org/10.5281/zenodo.7096258
+Vékony, T. (2021). Digit Span Task created with jsPsych (Version 1.0.0) [Computer software]. https://doi.org/10.5281/zenodo.7096258
 
 <a href="https://zenodo.org/badge/latestdoi/343400302"><img src="https://zenodo.org/badge/343400302.svg" alt="DOI"></a>
 
