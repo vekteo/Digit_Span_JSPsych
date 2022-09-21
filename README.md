@@ -22,7 +22,7 @@ Vékony, T. (2021). Digit Span Task created with jsPsych (Version 1.0.0) [Comput
 <h2>Output file</h2>
 
 - <strong>success:</strong> whether fullscreen mode was successfully started/ended (true or false)
-- <strong>trial_type:</strong> JSPSych trialtype of the given trial (fullscreen, html-keyboard-response or survey-html-form)
+- <strong>trial_type:</strong> jsPsych trialtype of the given trial (fullscreen, html-keyboard-response or survey-html-form)
 - <strong>trial_index:</strong> the number of the given trials (all events considered, even instructions, feedbacks!)
 - <strong>time_elapsed:</strong> the time elapsed from the start of the script in ms
 - <strong>subject:</strong> a 15-character long random subject ID for online version, and customized subject number for offline version
